@@ -3,8 +3,8 @@ services:
   proxy:
     image: jwilder/nginx-proxy:alpine
     ports:
-      - 80
-      - 443
+      - 80:80
+      - 443:443
     volumes:
       - nginx-proxy-html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
