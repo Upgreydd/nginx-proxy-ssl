@@ -9,8 +9,8 @@ services:
       - nginx-proxy-html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - /srv/docker/nginx-proxy/certs:/etc/nginx/certs:ro
-      - dhparam:/etc/nginx/dhparam
-      - vhostd:/etc/nginx/vhost.d
+      - nginx-proxy-dhparam:/etc/nginx/dhparam
+      - nginx-proxy-vhostd:/etc/nginx/vhost.d
     labels:
       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
   
